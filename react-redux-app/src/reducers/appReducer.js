@@ -1,5 +1,5 @@
-import React, { useReducer, useState } from "react";
-import ReactDOM from "react-dom";
+import { LAUNCH_LOADING, LAUNCH_SUCCESS, LAUNCH_FAILED } from "./../actions/actions";
+
 
 export const initialState = {
     launches: [],
@@ -10,15 +10,29 @@ export const initialState = {
 
 export const appReducer = (state = initialState, action) => {
     switch (action.type) {
-        case "ADD_FEATURE":
+        case LAUNCH_LOADING:
             return {
                 ...state,
+                isLoading: true,
+                error: null
             }
-        case "REMOVE_FEATURE":
+        case LAUNCH_SUCCESS:
             return {
                 ...state,
+                launches: action.payload,
+                isLoading: false,
+                error: null
+            };
+        case LAUNCH_FAILED:
+            return {
+                ...state,
+                launches: [],
+                isLoading: false,
+                error: action.payload
             };
         default:
             return state;
     }
 };
+
+export default appReducer;

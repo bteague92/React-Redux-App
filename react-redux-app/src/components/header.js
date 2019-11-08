@@ -3,8 +3,8 @@ import ReactDOM from 'react-dom';
 
 const Header = (props) => {
     return (
-        <div>
-
+        <div className="header">
+            SpaceX Launches
         </div>
     );
 }

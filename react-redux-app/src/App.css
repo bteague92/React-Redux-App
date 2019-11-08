@@ -1,5 +1,8 @@
 .App {
   text-align: center;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 
 .App-logo {
@@ -19,4 +22,32 @@
 
 .App-link {
   color: #09d3ac;
+}
+
+.header{
+  width: 100%;
+  height: 80px;
+  font-size: 55px;
+  background: blue;
+  color: white;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.launchCard{
+  width: 40%;
+  border: 1px solid black;
+  padding: 1%;
+}
+
+.button{
+  width: 80%;
+  background: black;
+  color: white;
+  margin: 1%;
+  font-size: 30px;
+  border-radius: 10px;
+  
 }
